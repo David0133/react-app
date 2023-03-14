@@ -1,21 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import About from './components/About';
+// import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
 
 
 import React from "react";
-import {
-BrowserRouter as Router, Route, Routes, Link
-} from "react-router-dom";
+// import {
+// BrowserRouter as Router, Route, Routes, Link
+// } from "react-router-dom";
 
 function App() {
-const  [myStyle,setMyStyle] = useState({
-color:'black'
-})
+// const  [myStyle,setMyStyle] = useState({
+// color:'black'
+// })
 const [mode, setMode] = useState('light');
 
 const toggleBar = ()=>{
@@ -53,22 +53,23 @@ showAlert(value +" mode is enable","success");
 
 return (
 <>
-<Router>
-<Navbar title="Learn" student="Name" toggleBar={toggleBar} mode={mode} myStyle={myStyle} toggleColor={toggleColor} color={setColor}/>
+{/* <Router> */}
+<Navbar title="Learn" student="Name" toggleBar={toggleBar} mode={mode}  toggleColor={toggleColor} color={setColor}/>
 <Alert alert={alert}/>
 <div className="container my-3">
 
   
-    <Routes>   
-  <Route exact path="/about" element={<About />} />
-  <Route exact path="/textForm" element={<TextForm heading="Enter your thought's" mode={mode} showAlert={showAlert} color={setColor} />} />
-</Routes>
+    {/* <Routes>    */}
+  {/* <Route exact path="/about" element={<About />} /> */}
+  {/* <Route exact path="/textForm" element={} /> */}
+  < TextForm heading="Enter your thought's" mode={mode} showAlert={showAlert} color={setColor}/>
+{/* </Routes> */}
   
 
     
 
 </div>
-</Router>
+{/* </Router> */}
 
 </>
 );
